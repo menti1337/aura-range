@@ -1,4 +1,12 @@
 {
     "servers": ["https://raw.githubusercontent.com/Mister-Kay/aura-range/master/"],
-    "supportUrl": "https://github.com/Mister-Kay/aura-range/issues"
+    "supportUrl": "https://github.com/Mister-Kay/aura-range/issues",
+    "packets": {
+        "S_LOGIN": 15,
+        "S_PARTY_MEMBER_LIST": 9,
+        "S_LEAVE_PARTY": 1,
+        "S_ABNORMALITY_BEGIN": 5,
+        "S_ABNORMALITY_REFRESH": 2,
+        "S_ABNORMALITY_END": 1
+    }
 }
