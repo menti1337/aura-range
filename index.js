@@ -1,7 +1,5 @@
-const Command = require('command');
-
 module.exports = function AuraRangeNotify(dispatch) {
-    const command = Command(dispatch);
+    const command = dispatch.command;
     const auras = [700230,700231,700232,700233,700330,700630,700631,700730,700731,601,602,603];
     const EffectId = 90520;
     
