@@ -1,5 +1,6 @@
 # aura-range
 Applies a visual effect on party members that have mystic auras when playing as mystic or manually enabled.
+Required: https://github.com/menti1337/HOTFIX_Starscape_Toolbox
 
 ## Info
 - The current visual effect is Apex Urgency. Party members glow bright yellow when auras are active and in-range.
