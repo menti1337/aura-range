@@ -33,6 +33,9 @@ module.exports = function AuraRangeNotify(dispatch) {
     
     dispatch.hook('S_LOGIN', 15, (event) => {
         gameId = event.gameId;
+		// --- debug log
+		//console.log('[aura-range] MY gameId:', gameId);
+		// ---
         let job = (event.templateId - 10101) % 100;
         enabled = (job === 7) ? true : false;
         partyMembers = [{gameId: gameId}];
@@ -41,6 +44,10 @@ module.exports = function AuraRangeNotify(dispatch) {
     
     dispatch.hook('S_PARTY_MEMBER_LIST', 9, (event) => {
         partyMembers = event.members;
+        console.log('[aura-range] partyMembers updated:', partyMembers.length, 'members');
+        for (const m of partyMembers) {
+            console.log('[aura-range]  -> gameId:', m.gameId, 'name:', m.name);
+        }
     });
     
     dispatch.hook('S_LEAVE_PARTY', 1, (event) => {
@@ -112,10 +119,10 @@ module.exports = function AuraRangeNotify(dispatch) {
             target: member.gameId,
             source: gameId,
             id: EffectId,
-            duration: 0,
-            unk: 0,
+            duration: BigInt('0x7FFFFFFF'),
             stacks: 1,
-            unk2: 0
+            hitCylinderId: 0,
+            reason: 0
         });
     }
     
