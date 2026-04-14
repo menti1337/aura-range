@@ -1,5 +1,6 @@
 # aura-range
 Applies a visual effect on party members that have mystic auras when playing as mystic or manually enabled.
+
 Required: https://github.com/menti1337/HOTFIX_Starscape_Toolbox
 
 ## Info
